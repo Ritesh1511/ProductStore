@@ -5,7 +5,7 @@ namespace ProductStore.Models
 {
     public class ProductDto
     {
-        [Required, MaxLength(100)]
+        [Required, MaxLength(100)] 
         public string Name { get; set; } = "";
 
         [Required, MaxLength(100)]
