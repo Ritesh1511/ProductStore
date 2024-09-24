@@ -20,7 +20,7 @@ namespace ProductStore.Controllers
 
         public IActionResult Index()
         {
-            var products = context.Products.ToList(); //var products = context.Products.FromSqlRaw("SELECT * FROM PRODUCTS").ToList();
+            var products = context.Products.OrderBy(p => p.Id).ToList();
 
             return View(products);
         }
