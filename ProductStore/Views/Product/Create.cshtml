@@ -1,0 +1,45 @@
+﻿@model ProductDto
+
+
+<h1 class="text-center mb-5">New Product</h1>
+
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+
+    <label asp-for="Name" class="control-label">Product Name</label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+
+    <label asp-for="Brand" class="control-label">Brand</label>
+    <input asp-for="Brand" class="form-control" />
+    <span asp-validation-for="Brand" class="text-danger"></span>
+
+
+    <label asp-for="Category" class="control-label">Category</label>
+    <input asp-for="Category" class="form-control" />
+    <span asp-validation-for="Category" class="text-danger"></span>
+
+
+    <label asp-for="Price" class="control-label">Price</label>
+    <input asp-for="Price" class="form-control" />
+    <span asp-validation-for="Price" class="text-danger"></span>
+
+    <label asp-for="Description" class="control-label">Description</label>
+    <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+    <span asp-validation-for="Price" class="text-danger"></span>
+
+
+    <label asp-for="ImageFile" class="control-label">Product Image</label>
+    <input asp-for="ImageFile" type="file" class="form-control-file" />
+    <span asp-validation-for="ImageFile" class="text-danger"></span>
+
+    <div class="text-center mb-5">
+
+        <button class="btn btn-primary">Submit</button>
+
+        <button class="btn btn-danger" asp-controller="Product" asp-action="Index">Cancel</button>
+
+    </div>
+
+</form>
